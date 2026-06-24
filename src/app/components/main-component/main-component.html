@@ -1,0 +1,102 @@
+<app-nav-component></app-nav-component>
+
+<div class="home-container">
+    <header class="hero-section">
+        <div class="hero-content">
+            <h1>Pörgesd fel a szezont a Kecskerékpárral!</h1>
+            <p>
+                Tavaszi akcióink keretében most akár 20% kedvezménnyel készítjük fel kerékpárodat a
+                jóidőre, vagy szerezhetsz be új kiegészítőket.
+            </p>
+            <button class="cta-button" (click)="navigateTo('promotions')">
+                Akciók megtekintése
+            </button>
+        </div>
+    </header>
+
+    <section class="services-section">
+        <div class="tile-card" (click)="navigateTo('service')">
+            <mat-icon class="tile-icon">build</mat-icon>
+            <h2>Professzionális Szervíz</h2>
+            <p>
+                Kisebb beállításoktól a teljes szervízig. Hozd be hozzánk, és szakértő kezeink
+                között újjávarázsoljuk a kerékpárodat!
+            </p>
+            <button class="tile-button" (click)="navigateTo('service')">Szervíz igénylése</button>
+        </div>
+
+        <div class="tile-card">
+            <mat-icon class="tile-icon">settings</mat-icon>
+            <h2>Minőségi Alkatrészek</h2>
+            <p>
+                MINDENT EGY HELYEN! Kopóalkatrészek, kiegészítők és extrák széles választéka
+                raktárról, minden típusú kerékpárhoz.
+            </p>
+            <button class="tile-button" (click)="navigateTo('parts')">
+                Alkatrészek megtekintése
+            </button>
+        </div>
+    </section>
+
+    <section class="facebook-section">
+        <h2>Kövess minket Facebookon is!</h2>
+        <div class="fb-container">
+            <iframe
+                src="https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/kecskerekpar/?locale=hu_HU&tabs=timeline&width=500&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+                width="500"
+                height="500"
+                style="border: none; overflow: hidden; width: 100%; max-width: 500px"
+                scrolling="no"
+                frameborder="0"
+                allowfullscreen="true"
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+            >
+            </iframe>
+        </div>
+    </section>
+
+    <section class="opening-hours-section">
+        <div class="hours-container">
+            <div class="tile-card">
+                <div class="hours-card">
+                            <h2>Nyitvatartás</h2>
+                    <h3>Hétfő - Péntek</h3>
+                    <p>08:00 - 18:00</p>
+                </div>
+                <div class="hours-card">
+                    <h3>Szombat</h3>
+                    <p>09:00 - 14:00</p>
+                </div>
+                <div class="hours-card">
+                    <h3>Vasárnap</h3>
+                    <p>Zárva</p>
+                </div>
+            </div>
+            <div class="tile-card">
+                <h3>Rólunk</h3>
+                <p>
+                    A Kecskerékpár egy megbízható és szakértelmet adó kerékpárbolt, amely
+                    különleges szolgáltatásokkal és minőségi termékekkel kínálja ügyfeleinek
+                    szükségleteit.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-col">
+                <h3>Kecskerékpár</h3>
+                <p>A te kerékpárboltod és megbízható szervized.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Kapcsolat</h4>
+                <p><mat-icon>location_on</mat-icon> Kecskemét, Kodály Zoltán tér 11, 6000</p>
+                <p><mat-icon>phone</mat-icon> +36 20 983 3050</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Kecskerékpár. Minden jog fenntartva.</p>
+        </div>
+    </footer>
+</div>

@@ -1,0 +1,89 @@
+$primary-color: #acbcff;
+$primary-blue: #8faaff;
+$primary-black: #222222;
+
+:host {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: block;
+}
+
+.navbar {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+    background-color: #ffffff;
+
+    .nav-title {
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .nav-actions {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        .nav-item {
+            background: none;
+            border: none;
+            border-radius: 4px;
+            padding: 8px;
+            margin-right: 16px;
+            color: $primary-black;
+            font-size: 20px;
+            font-weight: normal;
+            cursor: pointer;
+            transition:
+                color 0.2s,
+                transform 0.2s;
+
+            &:hover {
+                color: $primary-blue;
+                transform: translateY(-2px);
+            }
+        }
+        .dropdown-wrapper {
+            position: relative;
+            display: inline-block;
+
+            .dropdown-menu {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                align-items: stretch;
+                top: 100%;
+                border-radius: 12px;
+                padding: 0.6rem 1.2rem;
+                background-color: #ffffff;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                transition:
+                    opacity 0.2s,
+                    visibility 0.2s;
+                opacity: 0;
+                visibility: hidden;
+
+                .dropdown-btn {
+                    gap: 0.5rem;
+                    border: none;
+                    padding: 0.5rem;
+                    background: none;
+                    cursor: pointer;
+                    transition: color 0.2s;
+
+                    &:hover {
+                        color: $primary-blue;
+                    }
+                }
+            }
+
+            &:hover .dropdown-menu {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+}

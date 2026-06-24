@@ -1,0 +1,16 @@
+<nav class="navbar">
+    <button class="nav-title" (click)="navigateTo('main')"><img src="images/logo.jpg" alt="logo" width="25%" height="25%"></button>
+    <div class="nav-actions">
+        <button class="nav-item" (click)="navigateTo('main')">Kezdőlap</button>
+        <button class="nav-item" (click)="navigateTo('about')">Rólunk</button>
+        <div class="dropdown-wrapper">
+            <button class="nav-item dropdown-btn">Dropdown</button>
+
+            <div class="dropdown-menu">
+                <button class="dropdown-btn" (click)="navigateTo('main')">Szervíz</button>
+
+                <button class="dropdown-btn" (click)="navigateTo('main')">Alkatrészek</button>
+            </div>
+        </div>
+    </div>
+</nav>
