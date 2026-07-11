@@ -1,21 +1,13 @@
-<app-nav-component></app-nav-component>
-
 <div class="home-container">
     <header class="hero-section">
         <div class="hero-content">
-            <h1>Pörgesd fel a szezont a Kecskerékpárral!</h1>
-            <p>
-                Tavaszi akcióink keretében most akár 20% kedvezménnyel készítjük fel kerékpárodat a
-                jóidőre, vagy szerezhetsz be új kiegészítőket.
-            </p>
-            <button class="cta-button" (click)="navigateTo('promotions')">
-                Akciók megtekintése
-            </button>
+            <h1>Üdvözlünk a Kecskerékpár weboldalán!</h1>
+            <p>Fedezd fel a kerékpározás világát, és találd meg a tökéletes kerékpárt hozzád!</p>
         </div>
     </header>
 
     <section class="services-section">
-        <div class="tile-card" (click)="navigateTo('service')">
+        <div class="tile-card">
             <mat-icon class="tile-icon">build</mat-icon>
             <h2>Professzionális Szervíz</h2>
             <p>
@@ -38,47 +30,41 @@
         </div>
     </section>
 
-    <section class="facebook-section">
-        <h2>Kövess minket Facebookon is!</h2>
-        <div class="fb-container">
-            <iframe
-                src="https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/kecskerekpar/?locale=hu_HU&tabs=timeline&width=500&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
-                width="500"
-                height="500"
-                style="border: none; overflow: hidden; width: 100%; max-width: 500px"
-                scrolling="no"
-                frameborder="0"
-                allowfullscreen="true"
-                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-            >
-            </iframe>
-        </div>
-    </section>
-
-    <section class="opening-hours-section">
-        <div class="hours-container">
-            <div class="tile-card">
-                <div class="hours-card">
-                            <h2>Nyitvatartás</h2>
-                    <h3>Hétfő - Péntek</h3>
-                    <p>08:00 - 18:00</p>
-                </div>
-                <div class="hours-card">
-                    <h3>Szombat</h3>
-                    <p>09:00 - 14:00</p>
-                </div>
-                <div class="hours-card">
-                    <h3>Vasárnap</h3>
-                    <p>Zárva</p>
-                </div>
+    <section class="fb-opening-hours-section">
+        <div class="fb-opening-hours-container">
+            <div class="fb-opening-hours-card">
+                <h2>Kövess minket Facebookon is!</h2>
+                <iframe
+                    src="https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/kecskerekpar/?locale=hu_HU&tabs=timeline&width=500&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+                    width="500"
+                    height="500"
+                    style="border: none; overflow: hidden; width: 100%; max-width: 500px"
+                    scrolling="no"
+                    frameborder="0"
+                    allowfullscreen="true"
+                    allow="
+                        autoplay;
+                        clipboard-write;
+                        encrypted-media;
+                        picture-in-picture;
+                        web-share;
+                    "
+                >
+                </iframe>
             </div>
-            <div class="tile-card">
-                <h3>Rólunk</h3>
-                <p>
-                    A Kecskerékpár egy megbízható és szakértelmet adó kerékpárbolt, amely
-                    különleges szolgáltatásokkal és minőségi termékekkel kínálja ügyfeleinek
-                    szükségleteit.
-                </p>
+
+            <div class="fb-opening-hours-card">
+                <h2>Nyitvatartás</h2>
+                <h3>Hétfő - Szerda</h3>
+                <p>09:00 - 18:00</p>
+                <h3>Csütörtök</h3>
+                <p>13:00 - 19:00</p>
+                <h3>Péntek</h3>
+                <p>07:00 - 13:00</p>
+                <h3>Szombat</h3>
+                <p>09:00 - 10:00</p>
+                <h3>Vasárnap</h3>
+                <p>Zárva</p>
             </div>
         </div>
     </section>
