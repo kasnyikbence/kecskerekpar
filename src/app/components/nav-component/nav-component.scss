@@ -1,6 +1,8 @@
-$primary-color: #acbcff;
-$primary-blue: #8faaff;
+$primary-color: #c3b183;
+$secondary-color: #af945e;
 $primary-black: #222222;
+$primary-white: #fafbff;
+$primary-paragraph: #666;
 
 :host {
     display: contents;
@@ -16,7 +18,8 @@ $primary-black: #222222;
     z-index: 1000;
     height: 80px;
     padding: 0 2rem;
-    background-color: #ffffff;
+    background-color: $primary-white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
     .nav-title {
         background: none;
@@ -32,7 +35,7 @@ $primary-black: #222222;
             border: none;
             border-radius: 4px;
             padding: 8px;
-            margin-right: 16px;
+            margin: 16px;
             color: $primary-black;
             font-size: 20px;
             font-weight: normal;
@@ -42,7 +45,7 @@ $primary-black: #222222;
                 transform 0.2s;
 
             &:hover {
-                color: $primary-blue;
+                color: $secondary-color;
                 transform: translateY(-2px);
             }
         }
@@ -55,10 +58,13 @@ $primary-black: #222222;
                 display: flex;
                 flex-direction: column;
                 align-items: stretch;
+                left: 50%;
+                transform: translateX(-50%);
                 top: 100%;
                 border-radius: 12px;
+                border: 2px solid rgba(0, 0, 0, 0.1);
                 padding: 0.6rem 1.2rem;
-                background-color: #ffffff;
+                background-color: $primary-white;
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
                 transition:
                     opacity 0.2s,
@@ -71,11 +77,16 @@ $primary-black: #222222;
                     border: none;
                     padding: 0.5rem;
                     background: none;
+                    font-size: 1.2rem;
                     cursor: pointer;
                     transition: color 0.2s;
 
                     &:hover {
-                        color: $primary-blue;
+                        color: $secondary-color;
+                    }
+
+                    &:not(:last-child) {
+                        border-bottom: 2px solid rgba(0, 0, 0, 0.1);
                     }
                 }
             }

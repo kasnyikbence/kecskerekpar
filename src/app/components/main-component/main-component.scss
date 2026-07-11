@@ -1,6 +1,23 @@
-$primary-color: #acbcff;
-$primary-blue: #8faaff;
+$primary-color: #c3b183;
+$secondary-color: #af945e;
 $primary-black: #222222;
+$primary-white: #fafbff;
+$secondary-white: #ffffff;
+$primary-paragraph: #666;
+
+$primary-blue: #acbcff;
+$secondary-blue: #8faaff;
+
+section {
+    opacity: 0;
+    translate: -50%;
+    transition: 600ms ease-in-out;
+}
+
+section.show {
+    opacity: 1;
+    translate: 0;
+}
 
 .home-container {
     display: flex;
@@ -8,12 +25,22 @@ $primary-black: #222222;
     gap: 4rem;
     padding-top: 2rem;
 
+    .section-heading {
+        font-size: 2.5rem;
+        color: $primary-black;
+        padding-bottom: 1rem;
+
+        &:not(:last-child) {
+            border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+        }
+    }
+
     .tile-card {
-        background: #ffffff;
+        background: $secondary-white;
         border-radius: 16px;
         padding: 2.5rem 2rem;
         width: 100%;
-        max-width: 500px;
+        max-width: 40rem;
         text-align: center;
         box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
         transition:
@@ -30,11 +57,14 @@ $primary-black: #222222;
         justify-content: center;
         display: flex;
         flex-direction: column;
-        background: linear-gradient(135deg, $primary-color, #dae0ff);
+        background-image: url('/images/hero-banner-bg.png');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
         height: 100%;
-        min-height: 47rem;
+        min-height: 50rem;
         margin: 0 2rem;
-        padding: 2rem;
+        padding: 1rem;
         text-align: center;
         border-radius: 24px;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
@@ -42,120 +72,183 @@ $primary-black: #222222;
         .hero-content {
             width: 100%;
             min-width: 10rem;
-            color: $primary-black;
-        }
+            color: $primary-white;
 
-        h1 {
-            flex-wrap: wrap;
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            line-height: 1.2;
-        }
+            .hero-title {
+                font-size: 8rem;
+                margin-bottom: 1rem;
+                line-height: 1.2;
+                animation: periodic-bounce 5s infinite;
+            }
 
-        p {
-            flex-wrap: wrap;
-            font-size: 1.25rem;
-            color: #444;
-            margin-bottom: 2rem;
-            max-width: 600px;
-            margin-inline: auto;
-            line-height: 1.6;
+            @keyframes periodic-bounce {
+                0%,
+                85%,
+                100% {
+                    transform: translateY(0);
+                }
+                90% {
+                    transform: translateY(-10px);
+                }
+                95% {
+                    transform: translateY(3px);
+                }
+            }
+
+            h2 {
+                font-size: 3rem;
+                margin-bottom: 1.5rem;
+                line-height: 1.4;
+            }
+
+            p {
+                flex-wrap: wrap;
+                font-size: 1.5rem;
+                margin-bottom: 2rem;
+                margin-inline: auto;
+                line-height: 1.6;
+            }
         }
     }
 
     .services-section {
         display: flex;
         justify-content: center;
+        flex-direction: column;
+        align-items: center;
         gap: 2rem;
         padding: 0 2rem;
-        flex-wrap: wrap;
 
-        .tile-icon {
-            font-size: 3.5rem;
-            width: 3.5rem;
-            height: 3.5rem;
-            color: #acbcff;
-            margin-bottom: 1rem;
-        }
+        .services-container {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
 
-        h2 {
-            margin-bottom: 1rem;
-            color: #222;
-            font-size: 1.5rem;
-        }
+            .tile-card {
+                .tile-icon {
+                    font-size: 3.5rem;
+                    width: 3.5rem;
+                    height: 3.5rem;
+                    color: $primary-color;
+                    margin-bottom: 1rem;
+                }
 
-        p {
-            color: #666;
-            line-height: 1.6;
-            font-size: 1.1rem;
-        }
+                &:hover {
+                    .tile-icon {
+                        color: $secondary-color;
+                    }
 
-        .tile-button {
-            margin-top: 1.5rem;
-            padding: 12px 24px;
-            font-size: 1.3rem;
-            font-weight: bold;
-            border: none;
-            border-radius: 30px;
-            background-color: #acbcff;
-            color: #000000;
-            cursor: pointer;
-            transition:
-                transform 0.2s,
-                background-color 0.2s,
-                box-shadow 0.2s;
+                    .tile-button {
+                        background-color: $secondary-color;
+                    }
+                }
 
-            &:hover {
-                background-color: #8faaff;
-                transform: translateY(-2px);
-                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+                h2 {
+                    margin-bottom: 1rem;
+                    color: $primary-black;
+                    font-size: 1.5rem;
+                }
+
+                p {
+                    color: $primary-paragraph;
+                    line-height: 1.6;
+                    font-size: 1.1rem;
+                }
+
+                .tile-button {
+                    margin-top: 1.5rem;
+                    padding: 12px 24px;
+                    font-size: 1.3rem;
+                    font-weight: bold;
+                    border: none;
+                    border-radius: 30px;
+                    background-color: $primary-color;
+                    color: #000000;
+                    cursor: pointer;
+                    transition:
+                        transform 0.2s,
+                        background-color 0.2s,
+                        box-shadow 0.2s;
+
+                    &:hover {
+                        transform: translateY(-2px);
+                        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+                    }
+                }
             }
         }
     }
 
-    .fb-opening-hours-section {
+    .fb-section {
         display: flex;
         justify-content: center;
         flex-direction: row;
         padding: 0 2rem;
 
-        .fb-opening-hours-container {
+        .fb-container {
             display: flex;
             justify-content: center;
-            flex-direction: row;
+            flex-direction: column;
+            align-items: center;
             gap: 2rem;
 
-            .fb-opening-hours-card {
-                background: #ffffff;
+            img {
+                width: 100%;
+                max-width: 500rem;
+                border-radius: 16px;
+                box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+                cursor: pointer;
+
+                transition:
+                    transform 0.3s ease,
+                    box-shadow 0.3s ease;
+
+                &:hover {
+                    transform: translateY(-8px);
+                    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+                }
+            }
+        }
+    }
+
+    .opening-hours-section {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        padding: 0 2rem;
+
+        .opening-hours-container {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+
+            .tile-card {
+                background: $secondary-white;
                 border-radius: 16px;
                 padding: 2rem 2rem;
                 width: 100%;
                 min-width: 40rem;
                 text-align: center;
 
-                h2 {
-                    margin-bottom: 1rem;
-                    color: #222;
-                    font-size: 2rem;
-                    padding-bottom: 1rem;
-                }
-
                 h3 {
                     margin-bottom: 1rem;
-                    color: #444;
+                    color: $primary-black;
                     font-size: 1.5rem;
                 }
 
                 p {
                     font-size: 1.25rem;
-                    color: #666;
+                    color: $primary-paragraph;
                 }
             }
         }
     }
 
     .site-footer {
-        background-color: #222;
+        background-color: $primary-black;
         color: #e2e8f0;
         padding: 3rem 2rem 1rem;
         margin-top: 2rem;
@@ -170,7 +263,7 @@ $primary-black: #222222;
             .footer-col {
                 h3,
                 h4 {
-                    color: #ffffff;
+                    color: $secondary-white;
                     margin-bottom: 1.2rem;
                 }
 

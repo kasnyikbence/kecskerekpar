@@ -1,39 +1,52 @@
 <div class="home-container">
     <header class="hero-section">
         <div class="hero-content">
-            <h1>Üdvözlünk a Kecskerékpár weboldalán!</h1>
+            <h1 class="hero-title">KecsKerékpár</h1>
+            <h2>Kerékpárüzlet és Professzionális Szerviz</h2>
             <p>Fedezd fel a kerékpározás világát, és találd meg a tökéletes kerékpárt hozzád!</p>
         </div>
     </header>
 
     <section class="services-section">
-        <div class="tile-card">
-            <mat-icon class="tile-icon">build</mat-icon>
-            <h2>Professzionális Szervíz</h2>
-            <p>
-                Kisebb beállításoktól a teljes szervízig. Hozd be hozzánk, és szakértő kezeink
-                között újjávarázsoljuk a kerékpárodat!
-            </p>
-            <button class="tile-button" (click)="navigateTo('service')">Szervíz igénylése</button>
-        </div>
+        <h2 class="section-heading">Szolgáltatásaink</h2>
+        <div class="services-container">
+            <div class="tile-card">
+                <mat-icon class="tile-icon">build</mat-icon>
+                <h2>Professzionális Szervíz</h2>
+                <p>
+                    Kisebb beállításoktól a teljes szervízig. Hozd be hozzánk, és szakértő kezeink
+                    között újjávarázsoljuk a kerékpárodat!
+                </p>
+                <button class="tile-button" (click)="navigateTo('service')">
+                    Szervíz igénylése
+                </button>
+            </div>
 
-        <div class="tile-card">
-            <mat-icon class="tile-icon">settings</mat-icon>
-            <h2>Minőségi Alkatrészek</h2>
-            <p>
-                MINDENT EGY HELYEN! Kopóalkatrészek, kiegészítők és extrák széles választéka
-                raktárról, minden típusú kerékpárhoz.
-            </p>
-            <button class="tile-button" (click)="navigateTo('parts')">
-                Alkatrészek megtekintése
-            </button>
+            <div class="tile-card">
+                <mat-icon class="tile-icon">settings</mat-icon>
+                <h2>Minőségi Alkatrészek</h2>
+                <p>
+                    MINDENT EGY HELYEN! Kopóalkatrészek, kiegészítők és extrák széles választéka
+                    raktárról, minden típusú kerékpárhoz.
+                </p>
+                <button class="tile-button" (click)="navigateTo('parts')">
+                    Alkatrészek megtekintése
+                </button>
+            </div>
         </div>
     </section>
 
-    <section class="fb-opening-hours-section">
-        <div class="fb-opening-hours-container">
-            <div class="fb-opening-hours-card">
-                <h2>Kövess minket Facebookon is!</h2>
+    <section class="fb-section">
+        <div class="fb-container">
+            <h2 class="section-heading">Kövess minket Facebookon is!</h2>
+            <a
+                href="https://www.facebook.com/kecskerekpar"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <img src="/images/fb-bg.png" alt="Facebook Logo" width="auto" height="auto" />
+            </a>
+            <!--                
                 <iframe
                     src="https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/kecskerekpar/?locale=hu_HU&tabs=timeline&width=500&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
                     width="500"
@@ -50,11 +63,14 @@
                         web-share;
                     "
                 >
-                </iframe>
-            </div>
+                </iframe> //-->
+        </div>
+    </section>
 
-            <div class="fb-opening-hours-card">
-                <h2>Nyitvatartás</h2>
+    <section class="opening-hours-section">
+        <div class="opening-hours-container">
+            <h1 class="section-heading">Nyitvatartás</h1>
+            <div class="tile-card">
                 <h3>Hétfő - Szerda</h3>
                 <p>09:00 - 18:00</p>
                 <h3>Csütörtök</h3>
